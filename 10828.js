@@ -6,26 +6,29 @@ const input = require('fs')
 
 const N = Number(input.shift());
 const stack = [];
+const res = [];
 
 for (let _ = 0; _ < N; _++) {
     const op = input.shift();
     if (op === 'pop') {
         if (stack.length === 0) {
-            console.log(-1);
+            res.push(-1);
         } else {
-            console.log(stack.pop());
+            res.push(stack.pop());
         }
     } else if (op === 'size') {
-        console.log(stack.length);
+        res.push(stack.length);
     } else if (op === 'empty') {
-        console.log(stack.length === 0 ? 1 : 0);
+        res.push(stack.length === 0 ? 1 : 0);
     } else if (op === 'top') {
         if (stack.length === 0) {
-            console.log(-1);
+            res.push(-1);
         } else {
-            console.log(stack[stack.length - 1]);
+            res.push(stack[stack.length - 1]);
         }
     } else {
         stack.push(op.split(' ')[1]);
     }
 }
+
+console.log(res.join('\n'));
