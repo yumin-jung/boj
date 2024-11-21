@@ -3,6 +3,6 @@
     "fs": "^0.0.1-security"
   },
   "scripts": {
-    "test": "node test.js"
+    "node": "node ./dev/test.js"
   }
 }
