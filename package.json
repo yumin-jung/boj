@@ -3,6 +3,7 @@
     "fs": "^0.0.1-security"
   },
   "scripts": {
-    "node": "node ./dev/test.js"
+    "node": "node ./dev/test.js",
+    "rust": "rustc dev/test.rs -o dev/test && dev/test < dev/input.txt && rm dev/test"
   }
 }
