@@ -4,6 +4,7 @@
   },
   "scripts": {
     "node": "node ./dev/test.js",
-    "rust": "rustc dev/test.rs -o dev/test && dev/test < dev/input.txt && rm dev/test"
+    "rust": "rustc dev/test.rs -o dev/test && dev/test < dev/input.txt && rm dev/test",
+    "cpp": "g++ -o dev/test dev/test.cpp && ./dev/test && rm dev/test"
   }
 }
