@@ -21,6 +21,9 @@ for folder in "${!file_groups[@]}"; do
         rust)
             commit_message+="rust ${file_groups[$folder]} "
             ;;
+        cpp)
+            commit_message+="cpp ${file_groups[$folder]} "
+            ;;
         *)
             commit_message+="update $folder/${file_groups[$folder]} "
             ;;
